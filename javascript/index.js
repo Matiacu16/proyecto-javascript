@@ -19,20 +19,10 @@
 //    console.log(index);
 //}
 
-let entrada =prompt ('Ingresa tu contraseña')
-while (entrada != 'Hola123') { switch (entrada) {
-case "Hola124": alert ("Casi") 
-break;
-case "Hola1234": alert ("Contraseña Vieja")
-break;
-default: 
-alert ("Contraseña Incorrecta") }
-entrada = prompt ("Ingresar un nombre") }
 
-
-// function saludar() {
-//     console.log('Bienvenido A Automotora Solar');
-// }
+function saludar() {
+    console.log('Bienvenido A Automotora Solar');
+}
 
 // saludar()
 
@@ -41,46 +31,72 @@ entrada = prompt ("Ingresar un nombre") }
 //     alert('Nombre Ingresado: ' + nombreingresado)
 // }
 
-// solicitarnombre()
-// const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
-// addToShoppingCartButtons.forEach((addToCartButton) => {
-//     addToCartButton.addEventListener('click', addToCartClicked);
-// });
+COMPRA 
+function sumar(parametroA,parametroB){
+    let resultado = parametroA + parametroB
+    console.log('resultado es: '+resultado)
+    return resultado
+}
 
-// const comprarButton = document.querySelector('.comprarButton');
-// comprarButton.addEventListener('click', comprarButtonClicked);
+sumar(26000,46)
 
-// const shoppingCartItemsContainer = document.querySelector(
-//     '.shoppingCartItemsContainer'
-// );
-
-// function addToCartClicked(event) {
-//     const button = event.target;
-//     const item = button.closest('.item');
-
-//     const itemTitle = item.querySelector('.item-title').textContent;
-//     const itemPrice = item.querySelector('.item-price').textContent;
-//     const itemImage = item.querySelector('.item-image').src;
-
-//     addItemToShoppingCart(itemTitle, itemPrice, itemImage);
-// }
-
-// function sumar(parametroA,parametroB){
-//     let resultado = parametroA + parametroB
-//     console.log('resultado es: '+resultado)
-//     return resultado
-// }
-
-// sumar(26000,46)
-
-// function calcular(numeroA,numeroB,operacion) {
-//     switch (operacion) {
-//         case '+':
-//             return sumar(numeroA,numeroB)
-//             break;
+function calcular(numeroA,numeroB,operacion) {
+    switch (operacion) {
+        case '+':
+            return sumar(numeroA,numeroB)
+            break;
     
-//         default:
-//             return 0;
-//             break;
-//     }
-// }
+        default:
+            return 0;
+            break;
+    }
+}
+
+//CALCULADORA!!!
+
+alert
+
+function sumar(){
+
+    var primeraS = parseInt(document.getElementById("cas1").value);
+    let SegundaS = parseInt(document.getElementById("cas2").value);
+
+    let combinacion = primeraS + SegundaS
+    console.log(primeraS + SegundaS);
+    if (combinacion = Number)  { alert ("Su suma es" + [primeraS + SegundaS] )}
+
+}
+function restar(){
+
+    let primeraS = parseInt(document.getElementById("cas1").value);
+    let SegundaS = parseInt(document.getElementById("cas2").value);
+
+    let combinacion = primeraS - SegundaS
+    console.log(primeraS - SegundaS);
+    if (combinacion = Number)  { alert ("Su resta es" + [primeraS - SegundaS])}
+
+}
+
+function multiplicar(){
+
+    let primeraS = parseInt(document.getElementById("cas1").value);
+    let SegundaS = parseInt(document.getElementById("cas2").value);
+
+    let combinacion = primeraS * SegundaS
+    console.log(primeraS * SegundaS);
+
+    if (combinacion = Number)  { alert ("Su multiplicación es" + primeraS * SegundaS)}
+}
+
+function dividir(){
+
+    let primeraS = parseInt(document.getElementById("cas1").value);
+    let SegundaS = parseInt(document.getElementById("cas2").value);
+
+    let combinacion = primeraS / SegundaS
+    console.log(primeraS / SegundaS);
+
+    if (combinacion = Number)  { alert ("Su división es" + primeraS / SegundaS)}
+
+
+}

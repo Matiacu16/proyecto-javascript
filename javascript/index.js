@@ -1,102 +1,43 @@
-//CICLOS / ITERACIONES
+//BODY APARTADO TIENDA
+// console.log(document)
 
-//for (let index = 0; index < 10; index++) {
-//    console.log(index);    
-//}
+console.dir(document)
 
+//TITULO STYLE
 
-//let numero = 10
-//for (let index = 1; index < 12; index++) {
-//    let resultado = numero * index
-//    console.log('Resultado: ' + index + ' - ' + resultado);
-//}
+let titulo = document.getElementById('title')
 
+const title = document.getElementsByClassName(titulo)
 
-//for (let index = 0; index < 20; index++) {
-//    if(index == 10){
-//        break
-//    }
-//    console.log(index);
-//}
-
-
-function saludar() {
-    console.log('Bienvenido A Automotora Solar');
+for (const elemento of title) {
+    elemento.className = "black"
+    console.log(elemento)
 }
 
-// saludar()
+const lista = document.getElementsByClassName('item_title');
 
-// function solicitarnombre() {
-//     let nombreingresado = prompt('Ingrasar Nombre')
-//     alert('Nombre Ingresado: ' + nombreingresado)
-// }
+//console.dir(lista)
 
-COMPRA 
-function sumar(parametroA,parametroB){
-    let resultado = parametroA + parametroB
-    console.log('resultado es: '+resultado)
-    return resultado
+for (const elemento of lista) {
+    console.log(elemento.innerHTML)
 }
 
-sumar(26000,46)
+//Todos Los H3
+let elemento = document.querySelectorAll('#contenedor h3')
 
-function calcular(numeroA,numeroB,operacion) {
-    switch (operacion) {
-        case '+':
-            return sumar(numeroA,numeroB)
-            break;
-    
-        default:
-            return 0;
-            break;
-    }
-}
+console.log(elemento)
 
-//CALCULADORA!!!
+//Lista Automoviles
 
-alert
+const objetos = [
+    {Nombre:"Mercedes-Benz Clase A KIT AMG",Precio:"U$S 56990"},
+    {Nombre:"Audi A3 Full",Precio:"U$S 32000"},
+    {Nombre:"Audi A1 1.4",Precio:"U$S 26000"},
+    {Nombre:"Volkswagen Nivus Highline",Precio:"U$S 26990"},
+    {Nombre:"Volkswagen Gol Highline",Precio:"U$S 21500"},
+    {Nombre:"Renault Oroch 2022",Precio:"U$S 20990"},
+]
 
-function sumar(){
-
-    var primeraS = parseInt(document.getElementById("cas1").value);
-    let SegundaS = parseInt(document.getElementById("cas2").value);
-
-    let combinacion = primeraS + SegundaS
-    console.log(primeraS + SegundaS);
-    if (combinacion = Number)  { alert ("Su suma es" + [primeraS + SegundaS] )}
-
-}
-function restar(){
-
-    let primeraS = parseInt(document.getElementById("cas1").value);
-    let SegundaS = parseInt(document.getElementById("cas2").value);
-
-    let combinacion = primeraS - SegundaS
-    console.log(primeraS - SegundaS);
-    if (combinacion = Number)  { alert ("Su resta es" + [primeraS - SegundaS])}
-
-}
-
-function multiplicar(){
-
-    let primeraS = parseInt(document.getElementById("cas1").value);
-    let SegundaS = parseInt(document.getElementById("cas2").value);
-
-    let combinacion = primeraS * SegundaS
-    console.log(primeraS * SegundaS);
-
-    if (combinacion = Number)  { alert ("Su multiplicación es" + primeraS * SegundaS)}
-}
-
-function dividir(){
-
-    let primeraS = parseInt(document.getElementById("cas1").value);
-    let SegundaS = parseInt(document.getElementById("cas2").value);
-
-    let combinacion = primeraS / SegundaS
-    console.log(primeraS / SegundaS);
-
-    if (combinacion = Number)  { alert ("Su división es" + primeraS / SegundaS)}
-
-
-}
+objetos.map((value)=>{
+    console.log(value)
+})

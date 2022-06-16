@@ -9,11 +9,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="javascript/index.js"></script>
-    <title>Automotora</title>
+    
+        <title>Automotora</title>
 </head>
 <body>
-
+<style>
+    .black{
+        color:black;
+    }
+    .red{
+        color: red;
+    }
+</style>
     <nav class="navbar navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
             aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,19 +29,20 @@
     </nav>
     <header>
         <div class="container">
-            <h1 class="text-center">Automotora Solar</h1>
+            <h1 id="titulo" class="title text-center">Automotora Solar</h1>
             <hr>
         </div>
     </header>
     <!-- EMPIEZA SECTION STORE -->
-    <section class="store">
+    <section id="contenedor" class="store">
         <div class="container">
             <div class="items">
                 <div class="row">
 
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">Mercedes-Benz Clase A KIT AMG</h3>
+                            <div class="nombre_producto"></div>
+                            <h3 class="item_title">Mercedes-Benz Clase A KIT AMG</h3>
                             <img class="item-image" src="">
 
                             <div class="item-details">
@@ -45,7 +53,8 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">Audi A3 Full</h3>
+                            <div class="nombre_producto"></div>
+                            <h3 class="item_title">Audi A3 Full</h3>
 
                             <img class="item-image" src="">
 
@@ -60,7 +69,8 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">Audi A1 1.4</h3>
+                            <div class="nombre_producto"></div>
+                            <h3 class="item_title">Audi A1 1.4</h3>
 
                             <img class="item-image" src="">
 
@@ -72,7 +82,8 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">Volkswagen Nivus Highline</h3>
+                            <div class="nombre_producto"></div>
+                            <h3 class="item_title">Volkswagen Nivus Highline</h3>
 
                             <img class="item-image" src="">
 
@@ -86,7 +97,8 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">Volkswagen Gol Highline</h3>
+                            <div class="nombre_producto"></div>
+                            <h3 class="item_title">Volkswagen Gol Highline</h3>
 
                             <img class="item-image" src="">
                             <div class="item-details">
@@ -97,7 +109,8 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="item shadow mb-4">
-                            <h3 class="item-title">Renault Oroch 2022</h3>
+                            <div class="nombre_producto"></div>
+                            <h3 class="item_title">Renault Oroch 2022</h3>
 
                             <img class="item-image" src="">
                             <div class="item-details">
@@ -228,6 +241,7 @@
 
 
     <!--SCRIPTS IMPORT-->
+<script src="javascript/index.js"></script>
 <script src="../proyecto javascript/libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

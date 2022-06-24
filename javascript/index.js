@@ -18,22 +18,22 @@
 //console.log('updateShoppingCartTotal -> shoppingCartItems', shoppingCartItems);
 //console.log('updateShoppingCartTotal -> shoppingCartItemPrice',shoppingCartItemPrice);
 
-const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
+let addToShoppingCartButtons = document.querySelectorAll('.addToCart');
 addToShoppingCartButtons.forEach(addToCartButton => {
     addToCartButton.addEventListener('click', addToCartClicked);
 });
 
 //VARIABLE GLOBAL SHOPPING
-const shoppingCartItemsContainer = document.querySelector('.shoppingCartItemsContainer');
+let shoppingCartItemsContainer = document.querySelector('.shoppingCartItemsContainer');
 
 
 function addToCartClicked(event) {
-    const button = event.target;
-    const item = button.closest('.item');
+    let button = event.target;
+    let item = button.closest('.item');
 
-    const itemTitle = item.querySelector('.item-title').textContent;
-    const itemPrice = item.querySelector('.item-price').textContent;
-    const itemImagen = item.querySelector('.item-imagen').src;
+    let itemTitle = item.querySelector('.item-title').textContent;
+    let itemPrice = item.querySelector('.item-price').textContent;
+    let itemImagen = item.querySelector('.item-imagen').src;
     
 addItemToShoppingCart(itemTitle, itemPrice, itemImagen);
 }
@@ -41,8 +41,8 @@ addItemToShoppingCart(itemTitle, itemPrice, itemImagen);
 //INTERACCION CON HTML APARTADO SHOPPING CART
 
 function addItemToShoppingCart(itemTitle, itemPrice, itemImagen){
-    const shoppingCartRow = document.createElement('div');
-    const shoppingCartContent = `
+    let shoppingCartRow = document.createElement('div');
+    let shoppingCartContent = `
     <div class="row shoppingCartItem">
             <div class="col-6">
                 <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
@@ -80,18 +80,18 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImagen){
 //FUNCION DE UPDATE DEL CARRO DE COMPRAS
 function updateShoppingCartTotal(){
     let total = 0;
-    const shoppingCartTotal = document.querySelector('.shoppingCartTotal');
+    let shoppingCartTotal = document.querySelector('.shoppingCartTotal');
     
-    const shoppingCartItems = document.querySelectorAll('.shoppingCartItem');
+    let shoppingCartItems = document.querySelectorAll('.shoppingCartItem');
     
     shoppingCartItems.forEach(shoppingCartItem => {
-    const shoppingCartItemPriceElement = shoppingCartItem.querySelector('.shoppingCartItemPrice');
+    let shoppingCartItemPriceElement = shoppingCartItem.querySelector('.shoppingCartItemPrice');
     
-    const shoppingCartItemPrice = Number(shoppingCartItemPriceElement.textContent.replace('U$S', ''));
+    let shoppingCartItemPrice = Number(shoppingCartItemPriceElement.textContent.replace('U$S', ''));
     
-    const shoppingCartItemQuantityElement = shoppingCartItem.querySelector('.shoppingCartItemQuantity');
+    let shoppingCartItemQuantityElement = shoppingCartItem.querySelector('.shoppingCartItemQuantity');
     
-    const shoppingCartItemQuantity = Number(shoppingCartItemQuantityElement.value);
+    let shoppingCartItemQuantity = Number(shoppingCartItemQuantityElement.value);
     
     total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
     

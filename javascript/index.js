@@ -23,6 +23,10 @@ addToShoppingCartButtons.forEach(addToCartButton => {
     addToCartButton.addEventListener('click', addToCartClicked);
 });
 
+//SHOPPING CART BUTTON BOTON DE COMPRA
+const comprarButton = document.querySelector('.comprarButton');
+comprarButton.addEventListener('click', comprarButtonClicked);
+
 //VARIABLE GLOBAL SHOPPING
 let shoppingCartItemsContainer = document.querySelector('.shoppingCartItemsContainer');
 
@@ -41,6 +45,8 @@ addItemToShoppingCart(itemTitle, itemPrice, itemImagen);
 //INTERACCION CON HTML APARTADO SHOPPING CART
 
 function addItemToShoppingCart(itemTitle, itemPrice, itemImagen){
+    
+    
     let shoppingCartRow = document.createElement('div');
     let shoppingCartContent = `
     <div class="row shoppingCartItem">
@@ -71,7 +77,13 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImagen){
     shoppingCartRow.innerHTML = shoppingCartContent;
     shoppingCartItemsContainer.append(shoppingCartRow);
     
-    shoppingCartRow.querySelector('.buttonDelete').addEventListener('click', () => console.log('clicked'))
+    //FUNCION ELIMINAR ELEMENTOS DEL CARRO
+    shoppingCartRow.querySelector('.buttonDelete').addEventListener('click',removeShoppingCartItem);
+    
+    shoppingCartRow.querySelector('.buttonDelete').addEventListener('click', () => console.log('clicked'));
+    
+    shoppingCartRow.querySelector('.shoppingCartItemQuantity').addEventListener('change', quantityChanged);
+    
     
     
     updateShoppingCartTotal();
@@ -102,6 +114,29 @@ function updateShoppingCartTotal(){
     shoppingCartTotal.innerHTML = `${total.toFixed(3)}U$S`
 }
 
+//FUNCION ELIMINAR ELEMENTO DEL CARRO
+function removeShoppingCartItem(event) {
+    const buttonClicked = event.target;
+    buttonClicked.closest('.shoppingCartItem').remove();
+    updateShoppingCartTotal();
+}
 
-//CREAR UN REMOVE PARA EL SHOPPING CART ITEM!! TRABAJAR EN EL BOTON DE COMPRA PENDIENTE
+
+//FUNCION COMPRAR ELEMNTO DEL CARRO
+function comprarButtonClicked() {
+    shoppingCartItemsContainer.innerHTML = '';
+    updateShoppingCartTotal();
+}
+
+
+//FUNCION CANTIDADES EN EL CARRITO
+function quantityChanged(event) {
+    const input = event.target;
+    
+    input.value <= 0 ? (input.value = 1) : null;
+    updateShoppingCartTotal();
+}
+
+
 //EMPEZAR A CREAR PAG DE CONTACTO 
+//MEJORAR COMPRA DEL CARRO NO AÑADIR MULTIPLES ELEMENTOS

@@ -129,6 +129,8 @@ function comprarButtonClicked() {
 }
 
 
+
+
 //FUNCION CANTIDADES EN EL CARRITO
 function quantityChanged(event) {
     const input = event.target;

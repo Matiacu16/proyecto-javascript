@@ -139,6 +139,10 @@ function quantityChanged(event) {
     updateShoppingCartTotal();
 }
 
+function succesfullPurchase (params) {alert("Order Complete")}
+    let submitbutton = document.getElementById("succesfull-purchase"); 
+submitbutton.addEventListener("click", succesfullPurchase)
+
 
 //EMPEZAR A CREAR PAG DE CONTACTO 
 //MEJORAR COMPRA DEL CARRO NO AÑADIR MULTIPLES ELEMENTOS

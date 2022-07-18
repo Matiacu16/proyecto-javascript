@@ -1,15 +1,21 @@
-enviarAlert
-const showAlert = () => {
-    Swal.fire({
-        title: 'Compra',
-        text: 'Message successfully sent',
-        icon: 'error',
-        confirmButtonText: 'Cool'
-    })
-}
+function datosform (params) {
+    let name=document.getElementById("fname").value;
+    let surname=document.getElementById("lname").value;
+    let email=document.getElementById("email").value;
+    let phone=document.getElementById("phone").value;
+    let message=document.getElementById("message").value;
+    if (name=="")  { alert ("Enter your Name")
+    } else {
+    if (surname=="")  { alert ("Enter your Surname")} }
+    if (email=="")  { alert ("Enter your Email")}
+    if (phone=="")  { alert ("Enter your Phone")}
+    if (message=="")  { alert ("Leave your Message")};
+    let datos = [ { name: name, surname: surname, email: email, phone: phone, message: message}];
+    console.log(datos); 
+    localStorage.setItem("datos", JSON.stringify (datos)  )}
+let submitbutton = document.getElementById("sendAlert"); 
+submitbutton.addEventListener("click", datosform)
 
-let button = document.getElementById('enviarAlert');
-button.onclick = showAlert
 
 
 // const getDataByAJAX = () => {

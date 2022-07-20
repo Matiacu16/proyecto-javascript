@@ -1,12 +1,11 @@
 function datosform (params) {
-    let name=document.getElementById("fname").value;
+    let name=document.getElementById("fname").value; 
     let surname=document.getElementById("lname").value;
     let email=document.getElementById("email").value;
     let phone=document.getElementById("phone").value;
     let message=document.getElementById("message").value;
-    if (name=="")  { alert ("Enter your Name")
-    } else {
-    if (surname=="")  { alert ("Enter your Surname")} }
+    if (name=="")  { alert ("Enter your Name")} 
+    if (surname=="")  { alert ("Enter your Surname")} 
     if (email=="")  { alert ("Enter your Email")}
     if (phone=="")  { alert ("Enter your Phone")}
     if (message=="")  { alert ("Leave your Message")};

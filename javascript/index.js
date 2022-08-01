@@ -144,5 +144,4 @@ function succesfullPurchase (params) {alert("Order Complete")}
 submitbutton.addEventListener("click", succesfullPurchase)
 
 
-//EMPEZAR A CREAR PAG DE CONTACTO 
-//MEJORAR COMPRA DEL CARRO NO AÑADIR MULTIPLES ELEMENTOS
+// END CARRO DE COMPRAS 

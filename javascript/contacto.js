@@ -26,7 +26,7 @@ submitbutton.addEventListener("click", datosform)
 //     });
 // }
 
-const fetchData = async (prams) => {
+const fetchData = async (params) => {
     return new Promise ((resolve, reject) => {
         try {
             const options = {
@@ -72,3 +72,5 @@ fetchData(
         url: 'https://swapi.dev/api/people',
     }
 )
+
+// API 
